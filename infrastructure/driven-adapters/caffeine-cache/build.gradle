@@ -1,0 +1,9 @@
+dependencies {
+    implementation project(':model')
+    implementation 'org.springframework:spring-context'
+    // https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine
+    implementation group: 'com.github.ben-manes.caffeine', name: 'caffeine', version: '3.1.8'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-cache
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: '3.2.5'
+
+}

@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        //mavenLocal()
+        //maven { url '...' }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'User'
+
+include ':app-service'
+include ':model'
+include ':usecase'
+project(':app-service').projectDir = file('./applications/app-service')
+project(':model').projectDir = file('./domain/model')
+project(':usecase').projectDir = file('./domain/usecase')
+include ':mongo-repository'
+project(':mongo-repository').projectDir = file('./infrastructure/driven-adapters/mongo-repository')
+include ':api-rest'
+project(':api-rest').projectDir = file('./infrastructure/entry-points/api-rest')
+include ':aop'
+project(':aop').projectDir = file('./infrastructure/driven-adapters/aop')
+include ':kafka-producer'
+project(':kafka-producer').projectDir = file('./infrastructure/driven-adapters/kafka-producer')
+include ':caffeine-cache'
+project(':caffeine-cache').projectDir = file('./infrastructure/driven-adapters/caffeine-cache')
